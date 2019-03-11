@@ -4,7 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Movie.Name</h2>
+@{ 
+    var className = Model.Customers.Count > 1 ? "Popular" : null;
+}
+
+@* This is a comment 
+    of multiple lines. 
+    
+*@
+
+<h2 class="@className">@Model.Movie.Name</h2>
 
 @if (Model.Customers.Count == 0)
 {
